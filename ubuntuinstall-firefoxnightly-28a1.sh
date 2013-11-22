@@ -7,7 +7,7 @@ ver="firefox-28.0a1.es-AR.linux-x86_64.tar.bz2"
 
 killall firefox
 mkdir -p $HOME/.tmp-install/
-cd .tmp-install/
+cd ~/.tmp-install/
 
 
 	if [ -f "$ver" ]; then
