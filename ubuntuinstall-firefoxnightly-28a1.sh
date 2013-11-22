@@ -29,7 +29,7 @@ mkdir -p $HOME/.software-"$file"/
 mv firefox/ $HOME/.software-"$file"/
 cd $HOME/.software-"$file"/firefox
 #icon
-		wget http://upload.wikimedia.org/wikipedia/commons/9/9f/Deer_park_globe.svg -O $HOME/.software-firefox-280a1/firefox/Deer_park_globe.svg
+		wget https://copy.com/tyCviHsLp7qq/Deer_park_globe.svg?download=1 -O $HOME/.software-firefox-280a1/firefox/Deer_park_globe.svg
 
 	if [ -f "$file".desktop ]; then
 			echo ""$file".Desktop Detected! Automatically erasing that stuff to create a new install..."
