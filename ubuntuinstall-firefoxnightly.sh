@@ -11,7 +11,7 @@
 
 
 file="firefox-290a1"
-#path="$HOME/.software-firefox-280a1/"
+
 
 
 killall firefox
