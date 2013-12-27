@@ -1,7 +1,6 @@
 #!/bin/bash
 
-file="firefox-280a1"
-ver="firefox-28.0a1.es-AR.linux-x86_64.tar.bz2"
+file="firefox-290a1"
 #path="$HOME/.software-firefox-280a1/"
 
 
@@ -15,12 +14,10 @@ cd ~/.tmp-install/
 			tar -jxf "$ver"
 		else
 		echo "downloading firefox nightly:"
-		wget http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-mozilla-central-l10n/firefox-28.0a1.es-AR.linux-x86_64.tar.bz2
-		tar -jxf "$ver"
+		wget http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/firefox-29.0a1.en-US.linux-x86_64.tar.bz2 -O firefox-nightly.tar.bz2
+		tar -jxf firefox-nightly.tar.bz2
 		#rm "$ver"
 	fi
-
-
 
 
 firefox -CreateProfile nightly-session
@@ -29,7 +26,7 @@ mkdir -p $HOME/.software-"$file"/
 mv firefox/ $HOME/.software-"$file"/
 cd $HOME/.software-"$file"/firefox
 #icon
-		wget https://copy.com/tyCviHsLp7qq/Deer_park_globe.svg?download=1 -O $HOME/.software-firefox-280a1/firefox/Deer_park_globe.svg
+		wget https://copy.com/tyCviHsLp7qq/Deer_park_globe.svg?download=1 -O $HOME/.software-"$file"/firefox/Deer_park_globe.svg
 
 	if [ -f "$file".desktop ]; then
 			echo ""$file".Desktop Detected! Automatically erasing that stuff to create a new install..."
@@ -46,12 +43,12 @@ cd $HOME/.software-"$file"/firefox
 		echo Terminal=false >> "$file".desktop
 		echo "Categories=GNOME;GTK;Network;WebBrowser;"  >> "$file".desktop
 		echo Name=nightly-"$file" >> "$file".desktop
-		echo Icon=$HOME/.software-firefox-280a1/firefox/Deer_park_globe.svg >> "$file".desktop
-		echo Exec=sh $HOME/.software-firefox-280a1/firefox/"$file".sh >> "$file".desktop
+		echo Icon=$HOME/.software-"$file"/firefox/Deer_park_globe.svg >> "$file".desktop
+		echo Exec=sh $HOME/.software-"$file"/firefox/"$file".sh >> "$file".desktop
 		echo "--------------------------------"
 
 echo "#!/bin/bash" >> "$file".sh
-echo "$HOME/.software-firefox-280a1/firefox/firefox -P nightly-session" >> "$file".sh
+echo "$HOME/.software-"$file"/firefox/firefox -P nightly-session" >> "$file".sh
 		
 chmod +x "$file".sh
 chmod +x "$file".desktop
