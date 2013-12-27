@@ -61,9 +61,9 @@ echo "$HOME/.software-"$file"/firefox/firefox -P nightly-session" >> "$file".sh
 		
 chmod +x "$file".sh
 chmod +x "$file".desktop
-
+mv "$file".desktop Firefox-Nightly.desktop
 echo "done, now copying the launcher to the system level" 
-sudo cp "$file".desktop /usr/share/applications
+sudo cp Firefox-Nightly.desktop /usr/share/applications
 cd ~
 
 
