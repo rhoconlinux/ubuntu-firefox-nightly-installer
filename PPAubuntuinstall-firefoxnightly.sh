@@ -55,8 +55,8 @@ cp firefox-trunk.* $HOME/.software-"$file"/firefox/
 #mv "$file".desktop firefox-trunk.desktop
 echo "done, now copying the launcher to the system level" 
 sudo cp -a /usr/share/applications/firefox-trunk.desktop  /usr/share/applications/firefox-trunk.rename_to_desktop_to_restore
-sudo rm /usr/share/applications/firefox-trunk.desktop
-sudo cp firefox-trunk.desktop /usr/share/applications
+sudo rm /usr/share/applications/firefox-trun*
+sudo cp firefox-trunk.desktop /usr/share/applications/Nightly.desktop
 cd ~
 
 
